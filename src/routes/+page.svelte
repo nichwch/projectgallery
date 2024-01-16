@@ -10,14 +10,15 @@
 	const projects: ProjectEntry[] = data.projects;
 
 	$: allTechnologies = Array.from(
-		projects.reduce<Set<string>>((prev, curr) => {
+		projects.reduce<Map<string, number>>((prev, curr) => {
 			console.log({ prev });
 			for (let tech of curr.made_with) {
-				prev.add(tech);
+				prev.set(tech, prev.get(tech) ? prev.get(tech)! + 1 : 1);
 			}
 			return prev;
-		}, new Set()) || []
-	);
+		}, new Map()) || []
+	).sort((a: [string, number], b: [string, number]) => b[1] - a[1]);
+	$: console.log(allTechnologies);
 </script>
 
 <div class="mb-20 w-full mx-5 box-content lg:w-[36rem] lg:mx-auto">
