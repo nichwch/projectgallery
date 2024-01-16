@@ -77,7 +77,7 @@
         "description": "A web app that lets you explore different scale and arpeggio shapes on a guitar fretboard. It offers the option to overlay multiple patterns at the same time, which is handy if you want to practice playing chord tones in a key.",
         "links": [
             {
-                "name": "Public deployment",
+                "name": "public deployment",
                 "href": "https://fretboard.nicholaschen.io"
             },
             {
@@ -97,7 +97,7 @@
         "description": "An AI-powered TODO list. The idea was that the AI could help you break down big tasks into manageable tasks, and you could ask the AI what tasks to prioritize. In practice I found this to not be very useful, and so I stopped working on it. I open sourced it, on the off chance it's useful to someone else.",
         "links": [
             {
-                "name": "Public deployment",
+                "name": "public deployment",
                 "href": "https://telescope-gamma.vercel.app/"
             },
             {
@@ -153,7 +153,7 @@
         "description": "A little web app that lets you set an intention for what you want to work on, then pings you reminding you about your goal intermittently. I stopped using it because it doesn't really help me, but who knows, maybe it'll work for you.",
         "links": [
             {
-                "name": "Public deployment",
+                "name": "public deployment",
                 "href": "https://focusmachine.nicholaschen.io"
             },
             {
@@ -173,7 +173,7 @@
         "description": "An experimental web based slideshow creator. I ended up moving on to other projects, but I have it deployed on my website as a small tool to play with. The source code is public.",
         "links": [
             {
-                "name": "Public deployment",
+                "name": "public deployment",
                 "href": "https://slideshow.nicholaschen.io"
             },
             {
