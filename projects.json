@@ -1,0 +1,121 @@
+[
+    {
+        "name": "exegesis",
+        "created": "January 2021",
+        "description": "The predeccessor to Nomad Hypertext. exegesis is a writing app and blogging platform for non-linear thought. It's designed to help disorganized people (like myself) keep their ideas and thoughts neatly sorted, in an intuitive way. It is the successor project to YANA. Eventually, I got tired of manually organizing things with tags and made Nomad Hypertext.",
+        "links": [
+            {
+                "name": "try exegesis",
+                "href": "https://exegesis.io"
+            },
+            {
+                "name": "exegesis made #1 on ProductHunt",
+                "href": "https://www.producthunt.com/products/exegesis#exegesis"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "react",
+            "next.js",
+            "node.js",
+            "express.js",
+            "postgres",
+            "firebase"
+        ]
+    },
+    {
+        "name": "Fretboard Explorer",
+        "created": "March 2023",
+        "description": "A web app that lets you explore different scale and arpeggio shapes on a guitar fretboard. It offers the option to overlay multiple patterns at the same time, which is handy if you want to practice playing chord tones in a key.",
+        "links": [
+            {
+                "name": "Public deployment",
+                "href": "https://fretboard.nicholaschen.io"
+            },
+            {
+                "name": "source",
+                "href": "https://github.com/nichwch/fretboard-explorer"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "react"
+        ]
+    },
+    {
+        "name": "telescope [unfinished]",
+        "created": "August 2023",
+        "description": "An AI-powered TODO list. The idea was that the AI could help you break down big tasks into manageable tasks, and you could ask the AI what tasks to prioritize. In practice I found this to not be very useful, and so I stopped working on it. I open sourced it, on the off chance it's useful to someone else.",
+        "links": [
+            {
+                "name": "Public deployment",
+                "href": "https://telescope-gamma.vercel.app/"
+            },
+            {
+                "name": "source",
+                "href": "https://github.com/nichwch/telescope"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "react"
+        ]
+    },
+    {
+        "name": "YANA",
+        "created": "July 2019",
+        "description": "YANA was my old own personal notetaking app. I built it with an old text-editing engine that needed to be swapped out, which is why I started over with exegesis.",
+        "links": [
+            {
+                "name": "YANA made the front page of ProductHunt",
+                "href": "https://www.producthunt.com/products/yana-notes#yana"
+            }
+        ],
+        "made_with": [
+            "javascript",
+            "react",
+            "postgres",
+            "node.js",
+            "express.js",
+            "firebase"
+        ]
+    },
+    {
+        "name": "Focus Machine",
+        "created": "February 2021",
+        "description": "A little web app that lets you set an intention for what you want to work on, then pings you reminding you about your goal intermittently. I stopped using it because it doesn't really help me, but who knows, maybe it'll work for you.",
+        "links": [
+            {
+                "name": "Public deployment",
+                "href": "https://focusmachine.nicholaschen.io"
+            },
+            {
+                "name": "source",
+                "href": "https://github.com/nichwch/focus-machine"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "react"
+        ]
+    },
+    {
+        "name": "Hyperslide [unfinished]",
+        "created": "January 2022",
+        "description": "An experimental web based slideshow creator. I ended up moving on to other projects, but I have it deployed on my website as a small tool to play with. The source code is public.",
+        "links": [
+            {
+                "name": "Public deployment",
+                "href": "https://slideshow.nicholaschen.io"
+            },
+            {
+                "name": "source",
+                "href": "https://github.com/nichwch/serendipity"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "react"
+        ]
+    }
+]
