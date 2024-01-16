@@ -5,7 +5,7 @@
         "description": "A local first writing app built around semantic search. Nomad Hypertext embeds everything you write into a local vector database using a local AI model, then uses that database to show you related content for any given paragraph. This was my project at the Recurse Center.",
         "links": [
             {
-                "name": "source",
+                "name": "github",
                 "href": "https://github.com/nichwch/nomad-hypertext"
             },
             {
@@ -13,7 +13,7 @@
                 "href": "https://www.nomadhypertext.nicholaschen.io/"
             },
             {
-                "name": "essay about nomad hypertext",
+                "name": "about nomad hypertext",
                 "href": "https://blog.nicholaschen.io/posts/What%20is%20Nomad%20Hypertext.txt"
             }
         ],
@@ -29,7 +29,7 @@
         "description": "A static site generator that generates a list of related content for each paragraph, similar to Nomad Hypertext. My personal blog is deployed using Yurt.",
         "links": [
             {
-                "name": "source",
+                "name": "github",
                 "href": "https://github.com/nichwch/yurt"
             },
             {
@@ -37,7 +37,7 @@
                 "href": "https://blog.nicholaschen.io"
             },
             {
-                "name": "essay about yurt",
+                "name": "about yurt",
                 "href": "https://blog.nicholaschen.io/posts/What%20is%20Yurt.txt"
             }
         ],
@@ -81,7 +81,7 @@
                 "href": "https://fretboard.nicholaschen.io"
             },
             {
-                "name": "source",
+                "name": "github",
                 "href": "https://github.com/nichwch/fretboard-explorer"
             }
         ],
@@ -101,7 +101,7 @@
                 "href": "https://telescope-gamma.vercel.app/"
             },
             {
-                "name": "source",
+                "name": "github",
                 "href": "https://github.com/nichwch/telescope"
             }
         ],
@@ -119,7 +119,7 @@
         "description": "A VSCode extension that lets you leave tagged bookmarks in code, so you can find locations easier. I don't really use it because it doesn't help me a lot, and this was before I knew marks in Vim were a thing (which I also don't use).",
         "links": [
             {
-                "name": "source",
+                "name": "github",
                 "href": "https://github.com/nichwch/vscode-tagged-bookmarks"
             }
         ],
@@ -157,7 +157,7 @@
                 "href": "https://focusmachine.nicholaschen.io"
             },
             {
-                "name": "source",
+                "name": "github",
                 "href": "https://github.com/nichwch/focus-machine"
             }
         ],
@@ -177,7 +177,7 @@
                 "href": "https://slideshow.nicholaschen.io"
             },
             {
-                "name": "source",
+                "name": "github",
                 "href": "https://github.com/nichwch/serendipity"
             }
         ],
