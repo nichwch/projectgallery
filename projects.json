@@ -1,5 +1,53 @@
 [
     {
+        "name": "Nomad Hypertext",
+        "created": "January 2024",
+        "description": "A local first writing app built around semantic search. Nomad Hypertext embeds everything you write into a local vector database using a local AI model, then uses that database to show you related content for any given paragraph. This was my project at the Recurse Center.",
+        "links": [
+            {
+                "name": "source",
+                "href": "https://github.com/nichwch/nomad-hypertext"
+            },
+            {
+                "name": "nomad hypertext website",
+                "href": "https://www.nomadhypertext.nicholaschen.io/"
+            },
+            {
+                "name": "essay about nomad hypertext",
+                "href": "https://blog.nicholaschen.io/posts/What%20is%20Nomad%20Hypertext.txt"
+            }
+        ],
+        "made_with": [
+            "javascript",
+            "svelte",
+            "electron"
+        ]
+    },
+    {
+        "name": "Yurt",
+        "created": "January 2024",
+        "description": "A static site generator that generates a list of related content for each paragraph, similar to Nomad Hypertext. My personal blog is deployed using Yurt.",
+        "links": [
+            {
+                "name": "source",
+                "href": "https://github.com/nichwch/yurt"
+            },
+            {
+                "name": "my blog",
+                "href": "https://blog.nicholaschen.io"
+            },
+            {
+                "name": "essay about yurt",
+                "href": "https://blog.nicholaschen.io/posts/What%20is%20Yurt.txt"
+            }
+        ],
+        "made_with": [
+            "javascript",
+            "svelte",
+            "electron"
+        ]
+    },
+    {
         "name": "exegesis",
         "created": "January 2021",
         "description": "The predeccessor to Nomad Hypertext. exegesis is a writing app and blogging platform for non-linear thought. It's designed to help disorganized people (like myself) keep their ideas and thoughts neatly sorted, in an intuitive way. It is the successor project to YANA. Eventually, I got tired of manually organizing things with tags and made Nomad Hypertext.",
@@ -39,7 +87,7 @@
         ],
         "made_with": [
             "typescript",
-            "react"
+            "svelte"
         ]
     },
     {
@@ -58,7 +106,10 @@
         ],
         "made_with": [
             "typescript",
-            "react"
+            "svelte",
+            "sveltekit",
+            "supabase",
+            "tailwind"
         ]
     },
     {
