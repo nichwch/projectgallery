@@ -91,7 +91,8 @@
         ]
     },
     {
-        "name": "telescope [unfinished]",
+        "name": "telescope",
+        "unfinished": true,
         "created": "August 2023",
         "description": "An AI-powered TODO list. The idea was that the AI could help you break down big tasks into manageable tasks, and you could ask the AI what tasks to prioritize. In practice I found this to not be very useful, and so I stopped working on it. I open sourced it, on the off chance it's useful to someone else.",
         "links": [
@@ -110,6 +111,21 @@
             "sveltekit",
             "supabase",
             "tailwind"
+        ]
+    },
+    {
+        "name": "VSCode Tagged Bookmarks",
+        "created": "April 2023",
+        "description": "A VSCode extension that lets you leave tagged bookmarks in code, so you can find locations easier. I don't really use it because it doesn't help me a lot, and this was before I knew marks in Vim were a thing (which I also don't use).",
+        "links": [
+            {
+                "name": "source",
+                "href": "https://github.com/nichwch/vscode-tagged-bookmarks"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "vscode"
         ]
     },
     {
@@ -151,7 +167,8 @@
         ]
     },
     {
-        "name": "Hyperslide [unfinished]",
+        "name": "Hyperslide",
+        "unfinished": true,
         "created": "January 2022",
         "description": "An experimental web based slideshow creator. I ended up moving on to other projects, but I have it deployed on my website as a small tool to play with. The source code is public.",
         "links": [

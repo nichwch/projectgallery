@@ -19,10 +19,15 @@
 	{#each data.projects as project}
 		<div class="mt-10">
 			<div>
-				<span>
+				<span class="underline">
 					{project.name}
 				</span>
-				<span class="float-right">
+				{#if project.unfinished}
+					<span class="inline-block px-1 border border-black bg-red-300 text-xs ml-1"
+						>unfinished</span
+					>
+				{/if}
+				<span class="float-right text-gray-500">
 					{project.created}
 				</span>
 			</div>
