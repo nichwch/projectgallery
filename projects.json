@@ -1,5 +1,25 @@
 [
     {
+        "name": "Licks",
+        "created": "January 2024",
+        "description": "Reusable components for my personal projects, made with Svelte and Tailwind.",
+        "links": [
+            {
+                "name": "github",
+                "href": "https://github.com/nichwch/licks"
+            },
+            {
+                "name": "gallery",
+                "href": "https://www.licks.nicholaschen.io/"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "svelte",
+            "tailwind"
+        ]
+    },
+    {
         "name": "Nomad Hypertext",
         "created": "January 2024",
         "description": "A local first writing app built around semantic search. Nomad Hypertext embeds everything you write into a local vector database using a local AI model, then uses that database to show you related content for any given paragraph. This was my project at the Recurse Center.",
