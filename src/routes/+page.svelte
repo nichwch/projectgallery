@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MultiSelectorPopup } from 'licks';
+	import { MultiSelectorPopup, SingleSelectorPopup } from 'licks';
 
 	export let data;
 	type ProjectEntry = {
@@ -21,17 +21,19 @@
 		}, new Map()) || []
 	).sort((a: [string, number], b: [string, number]) => b[1] - a[1]);
 	$: console.log(allTechnologies);
-	const selectedTechnologies = new Set<string>();
+	const selectedTechnology = null as string | null;
 </script>
 
 <div class="mb-20 w-full mx-5 box-content lg:w-[36rem] lg:mx-auto">
 	<div class="mt-5 pt-5 mb-10 sticky top-0 bg-white">
 		<div>
 			<h1 class="inline-block">My projects</h1>
-			<MultiSelectorPopup
+			<SingleSelectorPopup
 				label="tech"
+				addLabelClasses="!text-xs"
+				addWindowClasses="!text-xs p-0"
 				options={allTechnologies.map((tech) => tech[0])}
-				selectedOptions={selectedTechnologies}
+				selection={selectedTechnology}
 			/>
 		</div>
 
