@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { MultiSelectorPopup } from 'licks';
+
 	export let data;
 	type ProjectEntry = {
 		name: string;
@@ -19,20 +21,18 @@
 		}, new Map()) || []
 	).sort((a: [string, number], b: [string, number]) => b[1] - a[1]);
 	$: console.log(allTechnologies);
+	const selectedTechnologies = new Set<string>();
 </script>
 
 <div class="mb-20 w-full mx-5 box-content lg:w-[36rem] lg:mx-auto">
 	<div class="mt-5 pt-5 mb-10 sticky top-0 bg-white">
 		<div>
 			<h1 class="inline-block">My projects</h1>
-			<label>
-				by tech
-				<select>
-					{#each allTechnologies as tech}
-						<option>{tech}</option>
-					{/each}
-				</select>
-			</label>
+			<MultiSelectorPopup
+				label="tech"
+				options={allTechnologies.map((tech) => tech[0])}
+				selectedOptions={selectedTechnologies}
+			/>
 		</div>
 
 		<h3 class="italic"><a href="https://nicholaschen.io">back to my main site</a></h3>
