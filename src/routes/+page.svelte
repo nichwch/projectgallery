@@ -21,19 +21,31 @@
 		}, new Map()) || []
 	).sort((a: [string, number], b: [string, number]) => b[1] - a[1]);
 	$: console.log(allTechnologies);
-	const selectedTechnology = null as string | null;
+	let selectedTechnologies = new Set<string>();
+
+	const AUTHORS_CHOICE = "author's choice";
+	const MOST_RECENT = 'most recent';
+	const LEAST_RECENT = 'least recent';
+	const SORT_OPTIONS = [AUTHORS_CHOICE, MOST_RECENT, LEAST_RECENT];
+	let sort_by = AUTHORS_CHOICE;
 </script>
 
 <div class="mb-20 w-full mx-5 box-content lg:w-[36rem] lg:mx-auto">
 	<div class="mt-5 pt-5 mb-10 sticky top-0 bg-white">
 		<div>
 			<h1 class="inline-block">My projects</h1>
-			<SingleSelectorPopup
+			<MultiSelectorPopup
 				label="tech"
 				addLabelClasses="!text-xs"
-				addWindowClasses="!text-xs p-0"
+				addWindowClasses="w-72 flex flex-wrap gap-1 !text-xs p-1"
 				options={allTechnologies.map((tech) => tech[0])}
-				selection={selectedTechnology}
+				bind:selectedOptions={selectedTechnologies}
+			/>
+			<SingleSelectorPopup
+				label="sort by"
+				addLabelClasses="!text-xs"
+				options={SORT_OPTIONS}
+				bind:selection={sort_by}
 			/>
 		</div>
 
