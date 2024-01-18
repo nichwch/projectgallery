@@ -61,22 +61,22 @@
 		<div>
 			<h1 class="inline-block">My projects</h1>
 			<LabelAndPopup
-				addLabelClasses="text-sm bg-gray-300 hover:bg-gray-400"
-				addWindowClasses="w-72 p-1"
+				addLabelClasses="!text-sm !bg-gray-300 hover:!bg-gray-400"
+				addWindowClasses="!w-72 !p-1"
 			>
 				<svelte:fragment slot="buttonContent">filters</svelte:fragment>
 				<svelte:fragment slot="windowContent">
 					<MultiSelectorPopup
 						label="tech"
 						addLabelClasses="!text-sm"
-						addWindowClasses="w-72 flex flex-wrap gap-1 !text-sm p-1"
+						addWindowClasses="!w-72 !flex !flex-wrap !gap-1 !text-sm p-1"
 						options={allTechnologies.map((tech) => tech[0])}
 						bind:selectedOptions={selectedTechnologies}
 					/>
 					<SingleSelectorPopup
 						label="order by"
 						addLabelClasses="!text-sm"
-						addWindowClasses="min-w-36 text-sm p-0"
+						addWindowClasses="!min-w-36 !text-sm !p-0"
 						options={SORT_OPTIONS}
 						bind:selection={sort_by}
 					/>
