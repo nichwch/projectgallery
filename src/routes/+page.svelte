@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MultiSelectorPopup, SingleSelectorPopup } from 'licks';
+	import { LabelAndPopup, MultiSelectorPopup, SingleSelectorPopup } from 'licks';
 
 	export let data;
 	type ProjectEntry = {
@@ -8,6 +8,7 @@
 		description: string;
 		links: { name: string; href: string }[];
 		made_with: string[];
+		unfinished?: boolean;
 	};
 	const projects: ProjectEntry[] = data.projects;
 
@@ -27,38 +28,72 @@
 	const MOST_RECENT = 'most recent';
 	const LEAST_RECENT = 'least recent';
 	const SORT_OPTIONS = [AUTHORS_CHOICE, MOST_RECENT, LEAST_RECENT];
-	let sort_by = AUTHORS_CHOICE;
+	let sort_by: typeof AUTHORS_CHOICE | typeof MOST_RECENT | typeof LEAST_RECENT = AUTHORS_CHOICE;
+
+	const SORT_FUNCTIONS = {
+		[AUTHORS_CHOICE]: (a: ProjectEntry, b: ProjectEntry): number => 0,
+		[MOST_RECENT]: (a: ProjectEntry, b: ProjectEntry): number =>
+			new Date(b.created).getTime() - new Date(a.created).getTime(),
+		[LEAST_RECENT]: (a: ProjectEntry, b: ProjectEntry): number =>
+			new Date(a.created).getTime() - new Date(b.created).getTime()
+	};
+
+	$: derivedProjects = projects
+		// filter by tags
+		.filter((project) => {
+			if (selectedTechnologies.size === 0) return true;
+			else {
+				const selectedTech = Array.from(selectedTechnologies);
+				console.log({ selectedTech });
+				console.log(project.made_with);
+				for (let tech of selectedTech) {
+					if (!project.made_with.includes(tech)) return false;
+				}
+				return true;
+			}
+		})
+		// respect sort order
+		.sort(SORT_FUNCTIONS[sort_by] || SORT_FUNCTIONS[AUTHORS_CHOICE]);
 </script>
 
 <div class="mb-20 w-full mx-5 box-content lg:w-[36rem] lg:mx-auto">
 	<div class="mt-5 pt-5 mb-10 sticky top-0 bg-white">
 		<div>
 			<h1 class="inline-block">My projects</h1>
-			<MultiSelectorPopup
-				label="tech"
-				addLabelClasses="!text-xs"
-				addWindowClasses="w-72 flex flex-wrap gap-1 !text-xs p-1"
-				options={allTechnologies.map((tech) => tech[0])}
-				bind:selectedOptions={selectedTechnologies}
-			/>
-			<SingleSelectorPopup
-				label="sort by"
-				addLabelClasses="!text-xs"
-				options={SORT_OPTIONS}
-				bind:selection={sort_by}
-			/>
+			<LabelAndPopup
+				addLabelClasses="text-sm bg-gray-300 hover:bg-gray-400"
+				addWindowClasses="w-72 p-1"
+			>
+				<svelte:fragment slot="buttonContent">filters</svelte:fragment>
+				<svelte:fragment slot="windowContent">
+					<MultiSelectorPopup
+						label="tech"
+						addLabelClasses="!text-sm"
+						addWindowClasses="w-72 flex flex-wrap gap-1 !text-sm p-1"
+						options={allTechnologies.map((tech) => tech[0])}
+						bind:selectedOptions={selectedTechnologies}
+					/>
+					<SingleSelectorPopup
+						label="order by"
+						addLabelClasses="!text-sm"
+						addWindowClasses="min-w-36 text-sm p-0"
+						options={SORT_OPTIONS}
+						bind:selection={sort_by}
+					/>
+				</svelte:fragment>
+			</LabelAndPopup>
 		</div>
 
 		<h3 class="italic"><a href="https://nicholaschen.io">back to my main site</a></h3>
 	</div>
-	{#each data.projects as project}
+	{#each derivedProjects as project}
 		<div class="mt-10">
 			<div>
 				<span class="underline">
 					{project.name}
 				</span>
 				{#if project.unfinished}
-					<span class="inline-blockpx-1 text-red-500 font-bold text-xs ml-1">unfinished</span>
+					<span class="inline-blockpx-1 text-red-500 font-bold text-sm ml-1">unfinished</span>
 				{/if}
 				<span class="float-right text-gray-500">
 					{project.created}
@@ -71,7 +106,7 @@
 			</div>
 			<div>
 				{#each project.made_with as tech}
-					<span class="inline-block border border-black mr-2 bg-red-200 px-1 text-xs">{tech}</span>
+					<span class="inline-block border border-black mr-2 bg-red-200 px-1 text-sm">{tech}</span>
 				{/each}
 			</div>
 			<p class="mt-5">{project.description}</p>
