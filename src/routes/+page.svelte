@@ -21,7 +21,7 @@
 			return prev;
 		}, new Map()) || []
 	).sort((a: [string, number], b: [string, number]) => b[1] - a[1]);
-	$: console.log(allTechnologies);
+
 	let selectedTechnologies = new Set<string>();
 
 	const AUTHORS_CHOICE = "author's choice";
@@ -54,6 +54,15 @@
 		})
 		// respect sort order
 		.sort(SORT_FUNCTIONS[sort_by] || SORT_FUNCTIONS[AUTHORS_CHOICE]);
+
+	$: overlappingTechnologies = allTechnologies
+		.filter((tech) => {
+			for (let project of derivedProjects) {
+				if (project.made_with.includes(tech[0])) return true;
+			}
+			return false;
+		})
+		.map((tech) => tech[0]);
 </script>
 
 <div class="mb-20 w-full mx-5 box-content lg:w-[36rem] lg:mx-auto">
@@ -62,21 +71,22 @@
 			<h1 class="inline-block">My projects</h1>
 			<LabelAndPopup
 				addLabelClasses="!text-sm !bg-gray-300 hover:!bg-gray-400"
-				addWindowClasses="!w-72 !p-1"
+				addWindowClasses="!w-72 !p-1 !bg-gray-100"
 			>
 				<svelte:fragment slot="buttonContent">filters</svelte:fragment>
 				<svelte:fragment slot="windowContent">
 					<MultiSelectorPopup
 						label="tech"
 						addLabelClasses="!text-sm"
-						addWindowClasses="!w-72 !flex !flex-wrap !gap-1 !text-sm p-1"
-						options={allTechnologies.map((tech) => tech[0])}
+						addWindowClasses="!w-72 !flex !flex-wrap !gap-1 !text-sm p-1 !bg-gray-100"
+						options={overlappingTechnologies}
 						bind:selectedOptions={selectedTechnologies}
 					/>
 					<SingleSelectorPopup
 						label="order by"
-						addLabelClasses="!text-sm"
-						addWindowClasses="!min-w-36 !text-sm !p-0"
+						addLabelClasses="!text-sm !bg-gray-200 hover:!bg-gray-300"
+						addWindowClasses="!min-w-36 !text-sm !p-0 "
+						addOptionClasses="!bg-gray-200 hover:!bg-gray-300"
 						options={SORT_OPTIONS}
 						bind:selection={sort_by}
 					/>
@@ -106,7 +116,7 @@
 			</div>
 			<div>
 				{#each project.made_with as tech}
-					<span class="inline-block border border-black mr-2 bg-red-200 px-1 text-sm">{tech}</span>
+					<span class="inline-block border border-black mr-2 bg-red-300 px-1 text-sm">{tech}</span>
 				{/each}
 			</div>
 			<p class="mt-5">{project.description}</p>
