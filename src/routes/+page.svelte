@@ -63,11 +63,18 @@
 			return false;
 		})
 		.map((tech) => tech[0]);
+
+	let scrollY = 0;
 </script>
 
+<svelte:window bind:scrollY />
 <div class="mb-20 w-full mx-5 box-content lg:w-[36rem] lg:mx-auto">
 	<div class="mt-5 pt-5 mb-10 sticky top-0 bg-white">
-		<div>
+		<div
+			class:border-b-2={scrollY > 10}
+			class:border-b-gray-300={scrollY > 10}
+			class="transition-all pb-2"
+		>
 			<h1 class="inline-block">My projects</h1>
 			<LabelAndPopup
 				addLabelClasses="!text-sm !bg-gray-300 hover:!bg-gray-400"
@@ -92,9 +99,16 @@
 					/>
 				</svelte:fragment>
 			</LabelAndPopup>
+			<h3 class="italic"><a href="https://nicholaschen.io">back to my main site</a></h3>
+			{#if selectedTechnologies.size > 0}
+				<div class="text-gray-700 italic">
+					showing projects using
+					{#each Array.from(selectedTechnologies) as tech, index}
+						{tech}{index === selectedTechnologies.size - 1 ? '' : ', '}
+					{/each}
+				</div>
+			{/if}
 		</div>
-
-		<h3 class="italic"><a href="https://nicholaschen.io">back to my main site</a></h3>
 	</div>
 	{#each derivedProjects as project}
 		<div class="mt-10">
