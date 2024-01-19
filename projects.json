@@ -41,7 +41,8 @@
             "javascript",
             "svelte",
             "sveltekit",
-            "electron"
+            "electron",
+            "AI"
         ]
     },
     {
@@ -65,7 +66,8 @@
         "made_with": [
             "javascript",
             "svelte",
-            "electron"
+            "electron",
+            "AI"
         ]
     },
     {
@@ -131,7 +133,8 @@
             "svelte",
             "sveltekit",
             "supabase",
-            "tailwind"
+            "tailwind",
+            "AI"
         ]
     },
     {
