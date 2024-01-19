@@ -68,47 +68,45 @@
 </script>
 
 <svelte:window bind:scrollY />
-<div class="mb-20 w-full mx-5 box-content lg:w-[36rem] lg:mx-auto">
-	<div class="mt-5 pt-5 mb-10 sticky top-0 bg-white">
-		<div
-			class:border-b-2={scrollY > 10}
-			class:border-b-gray-300={scrollY > 10}
-			class="transition-all pb-2"
+<div class="mb-20 w-full px-5 box-border lg:w-[36rem] lg:mx-auto">
+	<div
+		class="mt-5 pt-5 mb-10 sticky top-0 bg-white transition-all pb-2"
+		class:border-b-2={scrollY > 10}
+		class:border-b-gray-300={scrollY > 10}
+	>
+		<h1 class="inline-block">My projects</h1>
+		<LabelAndPopup
+			addLabelClasses="!text-sm !bg-gray-300 hover:!bg-gray-400"
+			addWindowClasses="left-[-5.5rem]  md:left-0 !w-72 !p-1 !bg-gray-100"
 		>
-			<h1 class="inline-block">My projects</h1>
-			<LabelAndPopup
-				addLabelClasses="!text-sm !bg-gray-300 hover:!bg-gray-400"
-				addWindowClasses="!w-72 !p-1 !bg-gray-100"
-			>
-				<svelte:fragment slot="buttonContent">filters</svelte:fragment>
-				<svelte:fragment slot="windowContent">
-					<MultiSelectorPopup
-						label="tech"
-						addLabelClasses="!text-sm"
-						addWindowClasses="!w-72 !flex !flex-wrap !gap-1 !text-sm p-1 !bg-gray-100"
-						options={overlappingTechnologies}
-						bind:selectedOptions={selectedTechnologies}
-					/>
-					<SingleSelectorPopup
-						label="order by"
-						addLabelClasses="!text-sm !bg-gray-200 hover:!bg-gray-300"
-						addWindowClasses="!min-w-36 !text-sm !p-0 "
-						addOptionClasses="!bg-gray-200 hover:!bg-gray-300"
-						options={SORT_OPTIONS}
-						bind:selection={sort_by}
-					/>
-				</svelte:fragment>
-			</LabelAndPopup>
-			<h3 class="italic"><a href="https://nicholaschen.io">back to my main site</a></h3>
-			{#if selectedTechnologies.size > 0}
-				<div class="text-gray-700 italic">
-					showing projects using
-					{#each Array.from(selectedTechnologies) as tech, index}
-						{tech}{index === selectedTechnologies.size - 1 ? '' : ', '}
-					{/each}
-				</div>
-			{/if}
-		</div>
+			<svelte:fragment slot="buttonContent">filters</svelte:fragment>
+			<svelte:fragment slot="windowContent">
+				<MultiSelectorPopup
+					label="tech"
+					addLabelClasses="!text-sm"
+					addWindowClasses="!w-72 !flex !flex-wrap !gap-1 !text-sm p-1 !bg-gray-100"
+					options={overlappingTechnologies}
+					bind:selectedOptions={selectedTechnologies}
+				/>
+				<SingleSelectorPopup
+					label="order by"
+					addLabelClasses="!text-sm !bg-gray-200 hover:!bg-gray-300"
+					addWindowClasses="!min-w-36 !text-sm !p-0 "
+					addOptionClasses="!bg-gray-200 hover:!bg-gray-300"
+					options={SORT_OPTIONS}
+					bind:selection={sort_by}
+				/>
+			</svelte:fragment>
+		</LabelAndPopup>
+		<h3 class="italic"><a href="https://nicholaschen.io">back to my main site</a></h3>
+		{#if selectedTechnologies.size > 0}
+			<div class="text-gray-700 italic">
+				showing projects using
+				{#each Array.from(selectedTechnologies) as tech, index}
+					{tech}{index === selectedTechnologies.size - 1 ? '' : ', '}
+				{/each}
+			</div>
+		{/if}
 	</div>
 	{#each derivedProjects as project}
 		<div class="mt-10">
