@@ -133,6 +133,7 @@
             "svelte",
             "sveltekit",
             "supabase",
+            "postgres",
             "tailwind",
             "AI"
         ]
