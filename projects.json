@@ -152,7 +152,7 @@
     {
         "name": "YANA",
         "created": "July 2019",
-        "description": "YANA was my old own personal notetaking app. I built it with an old text-editing engine that needed to be swapped out, which is why I started over with exegesis.",
+        "description": "YANA was my old own personal notetaking app. I built it with an old text-editing engine that needed to be swapped out, which is why I started over with exegesis. I migrated all the users over to exegesis, so YANA is no longer available.",
         "links": [
             {
                 "name": "YANA made the front page of ProductHunt",
