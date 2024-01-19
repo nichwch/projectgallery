@@ -103,7 +103,9 @@
 			<div class="text-gray-700 italic">
 				showing projects using
 				{#each Array.from(selectedTechnologies) as tech, index}
-					{tech}{index === selectedTechnologies.size - 1 ? '' : ', '}
+					<span class="text-red-600">
+						{tech}{index === selectedTechnologies.size - 1 ? '' : ', '}
+					</span>
 				{/each}
 			</div>
 		{/if}
