@@ -1,22 +1,43 @@
 [
     {
-        "name": "Licks",
-        "created": "January 2024",
-        "description": "Reusable components for my personal projects, made with Svelte and Tailwind.",
+        "name": "Middle Class Text Editor [WIP]",
+        "created": "February 2024",
+        "description": "A svelte component implementing some rich text editor functionality, using a plain old textarea element.",
         "links": [
             {
                 "name": "github",
-                "href": "https://github.com/nichwch/licks"
+                "href": "https://github.com/nichwch/middle-class-text-editor"
             },
             {
-                "name": "gallery",
-                "href": "https://www.licks.nicholaschen.io/"
+                "name": "demo",
+                "href": "https://www.editor.nicholaschen.io/"
             }
         ],
         "made_with": [
             "typescript",
             "svelte",
             "tailwind"
+        ]
+    },
+    {
+        "name": "Heap",
+        "created": "February 2024",
+        "description": "A visualization of a heap data structure, shown in both array and tree form.",
+        "links": [
+            {
+                "name": "github",
+                "href": "https://github.com/nichwch/heap"
+            },
+            {
+                "name": "deployment",
+                "href": "https://www.heap.nicholaschen.io/"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "svelte",
+            "tailwind",
+            "shadcn"
         ]
     },
     {
@@ -68,6 +89,26 @@
             "svelte",
             "electron",
             "AI"
+        ]
+    },
+    {
+        "name": "Licks",
+        "created": "January 2024",
+        "description": "Reusable components for my personal projects, made with Svelte and Tailwind.",
+        "links": [
+            {
+                "name": "github",
+                "href": "https://github.com/nichwch/licks"
+            },
+            {
+                "name": "gallery",
+                "href": "https://www.licks.nicholaschen.io/"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "svelte",
+            "tailwind"
         ]
     },
     {
