@@ -1,5 +1,28 @@
 [
     {
+        "name": "Hexagram",
+        "created": "March 2024",
+        "description": "AI-powered app for studying Chinese. Generates sentences and stories from Anki flashcards.",
+        "links": [
+            {
+                "name": "github",
+                "href": "https://github.com/nichwch/hexagram"
+            },
+            {
+                "name": "download",
+                "href": "https://github.com/nichwch/hexagram/releases/tag/v0.1.0"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "svelte",
+            "tailwind",
+            "shadcn",
+            "tauri",
+            "AI"
+        ]
+    },
+    {
         "name": "Middle Class Text Editor [WIP]",
         "created": "February 2024",
         "description": "A svelte component implementing some rich text editor functionality, using a plain old textarea element.",
