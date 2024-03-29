@@ -115,26 +115,6 @@
         ]
     },
     {
-        "name": "Licks",
-        "created": "January 2024",
-        "description": "Reusable components for my personal projects, made with Svelte and Tailwind.",
-        "links": [
-            {
-                "name": "github",
-                "href": "https://github.com/nichwch/licks"
-            },
-            {
-                "name": "gallery",
-                "href": "https://www.licks.nicholaschen.io/"
-            }
-        ],
-        "made_with": [
-            "typescript",
-            "svelte",
-            "tailwind"
-        ]
-    },
-    {
         "name": "exegesis",
         "created": "January 2021",
         "description": "The predeccessor to Nomad Hypertext. exegesis is a writing app and blogging platform for non-linear thought. It's designed to help disorganized people (like myself) keep their ideas and thoughts neatly sorted, in an intuitive way. It is the successor project to YANA. Eventually, I got tired of manually organizing things with tags and made Nomad Hypertext.",
@@ -156,6 +136,26 @@
             "express.js",
             "postgres",
             "firebase"
+        ]
+    },
+    {
+        "name": "Licks",
+        "created": "January 2024",
+        "description": "Reusable components for my personal projects, made with Svelte and Tailwind.",
+        "links": [
+            {
+                "name": "github",
+                "href": "https://github.com/nichwch/licks"
+            },
+            {
+                "name": "gallery",
+                "href": "https://www.licks.nicholaschen.io/"
+            }
+        ],
+        "made_with": [
+            "typescript",
+            "svelte",
+            "tailwind"
         ]
     },
     {
