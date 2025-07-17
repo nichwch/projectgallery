@@ -26,6 +26,10 @@
                         {
                             "name": "try it",
                             "href": "https://gridworld.nicholaschen.io"
+                        },
+                        {
+                            "name": "github",
+                            "href": "https://github.com/nichwch/gridworld/tree/main"
                         }
                     ],
                     "made_with": [
