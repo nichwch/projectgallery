@@ -1,4 +1,42 @@
 [
+        {
+            "name": "Synesthesia",
+            "created": "June 2025",
+            "description": "A social music journaling app. Take notes and draw connections between songs.",
+            "links": [
+                {
+                    "name": "try it",
+                    "href": "https://synesthesia.club"
+                }
+            ],
+            "made_with": [
+                "typescript",
+                "react",
+                "tailwind",
+                "shadcn",
+                "next.js",
+                "supabase"
+            ]
+        },
+                {
+                    "name": "Gridworld",
+                    "created": "July 2025",
+                    "description": "A grid based turn based LLM agent simulator.",
+                    "links": [
+                        {
+                            "name": "try it",
+                            "href": "https://gridworld.nicholaschen.io"
+                        }
+                    ],
+                    "made_with": [
+                        "typescript",
+                        "react",
+                        "tailwind",
+                        "shadcn",
+                        "next.js",
+                        "AI"
+                    ]
+                },
     {
         "name": "Hexagram",
         "created": "March 2024",
